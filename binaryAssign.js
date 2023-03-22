@@ -9,7 +9,7 @@ while(num[middle]!==first<=last){
       console.log(middle);
     console.log(first);
     console.log(last);
-    if(num[middle]>6){
+    if(num[middle]>aim){
         last=middle-1;
     }  else{
         last=middle+1;
@@ -20,34 +20,34 @@ while(num[middle]!==first<=last){
     }
     //Given an unsorted array of numbers return the sorted array in descending order
 
-    let arr=[123,89,5,23,9,56]
-    function descending (arr,merge){
+    let arrOne=[123,89,5,23,9,56]
+    function descend (arrOne,merge){
         let left = 0;
         let right = length-1;
         while(left.length&&right.length){
             if(left [0]<right[0]);{
-            arr.push(left.shift());
+            arrOne.push(left.shift());
         }
     }
-    return[...arr ,...left,...right];
+    return[...arrOne ,...left,...right];
     }
-    function mergeSort(unsortedArray){
+    function themSort(unsortedArray){
         const middleIndex = unsortedArray.length/2;
         if(unsortedArray.length<2){
             return unsortedArray;
         }
         const leftIndex = unsortedArray.splice(0,middleIndex);
-        return mergeArrays(mergeSort(leftIndex)),mergeSort(unsortedArray);
+        return mergeArrays(themSort(leftIndex)),themSort(unsortedArray);
     }
     //
-    function mergeSort(arr) {
+    function themSort(arr) {
         if (arr.length <= 1) {
           return arr;
         }
         let mid = Math.floor(arr.length / 2);
         let left = arr.slice(0, mid);
         let right = arr.slice(mid);
-        return merge(mergeSort(left), mergeSort(right));
+        return merge(themSort(left), themSort(right));
       }
       function merge(left, right) {
         let result = [];
@@ -61,10 +61,10 @@ while(num[middle]!==first<=last){
         return [...result, ...left, ...right];
       }
       let arr4 = [123, 89, 5, 23, 9, 56];
-      arr = mergeSort(arr);
+      arrOne = themSort(arrOne);
       console.log(arr);
     function findTarget(arr, target) {
-            arr = mergeSort(arr);
+            arrOne = themSort(arrOne);
             let left = 0;
             let right = arr.length - 1;
             while (left <= right) {
@@ -79,14 +79,14 @@ while(num[middle]!==first<=last){
             }
             return null;
           }
-          function mergeSort(arr) {
+          function themSort(arr) {
             if (arr.length <= 1) {
               return arr;
             }
             let mid = Math.floor(arr.length / 2);
             let left = arr.slice(0, mid);
             let right = arr.slice(mid);
-            return merge(mergeSort(left), mergeSort(right));
+            return merge(themSort(left), themSort(right));
 }
 function merge(left, right) {
 let result = [];
